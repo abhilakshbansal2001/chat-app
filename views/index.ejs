@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>ChatCord App</title>
+	</head>
+	<body class="index">
+		<div class="join-container">
+			<header class="join-header">
+			<img src="logo/logoL.svg" height="60" alt="">	<h1> Chatsifi</h1>
+			</header>
+			<main class="join-main">
+				<form action="/chat-room" method="POST">
+					<div class="form-control">
+						<!-- <label for="username" style="margin-left: 10px;">Username</label> -->
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+							readonly
+							value= <%= name %>
+							
+						/>
+					</div>
+					<div class="form-control">
+						<!-- <label for="room">Room</label> -->
+						<!-- <select name="room" id="room"> -->
+							<!-- <option value="JavaScript">JavaScript</option>
+							<option value="Python">Python</option>
+							<option value="PHP">PHP</option>
+							<option value="C#">C#</option>
+							<option value="Ruby">Ruby</option>
+							<option value="Java">Java</option> -->
+
+							
+						<!-- </select> -->
+						<input type="text" name="room" placeholder="Enter room name" required autocomplete="off">
+					</div>
+					<div class="form-control">
+						<!-- <label for="password">Password</label> -->
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Enter password"
+							required
+						/>
+					</div>
+					<small style="color: red;">
+						<ul>
+						
+							
+							<% errorList.forEach(el => { %>
+								<li><%= el %></li> 
+							<% }); %>
+						</ul>
+					</small >
+
+					<button type="submit" class="btn">Join Chat</button>
+				</form>
+			
+			</main>
+		</div>
+		<a href="/logout" class="logout btn">Logout</a>
+	</body>
+</html>

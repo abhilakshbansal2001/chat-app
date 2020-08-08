@@ -1,0 +1,15 @@
+
+    @mixin message-box() {
+        padding: 10px;
+        margin-bottom: 15px;
+   
+        border-radius: 15px;
+        max-width: 55%;
+        min-width: 40%;
+    }
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,97 @@
+body.index {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+    background: $light-color;
+    height: 100vh;
+ 
+    // background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    background-color: #ed6663;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+
+.join-container {
+    width: 500px;
+    max-width: 500px;
+    // max-width: 90%;
+	margin: 80px auto;
+    color: #fff;
+    box-shadow: 0 3px 20px 2px #AF4442;
+
+
+.join-header {
+    h1{
+        font-weight: 900;
+    }
+	text-align: center;
+	padding: 20px;
+    // background: $dark-color-a;
+    background-color: #174768;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+    // background: $dark-color-b;
+    background-color: #0f4c75;
+    p {
+        margin-bottom: 20px;
+    }
+    .form-control {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+
+    }
+    ::placeholder{
+        color: $white;
+    }
+    input[type='text'],input[type='password'] {
+        font-size: 16px;
+        padding: 5px;
+        height: 40px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: $white;
+       
+        border: 1px solid $white;
+        border-radius: 20px;
+        padding-left: 15px;
+    }
+    input[type='text']:nth-child(odd):focus{
+        background-color: $white;
+        color: black;
+    }
+
+    .btn {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+}
+
+}
+.logout{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+// {
+//     font-size: 16px;
+//     padding: 5px;
+//     height: 40px;
+//     width: 100%;
+//     background-color: transparent;
+// }

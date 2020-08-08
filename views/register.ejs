@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login_css/util.css">
+	<link rel="stylesheet" type="text/css" href="login_css/main.css">
+<!--===============================================================================================-->
+
+<style>
+	.container-login100{
+		background: linear-gradient(120deg, #FFFFFF 0%, #FF006B 100%), linear-gradient(235deg, #FFFFFF 0%, #FF006B 100%), linear-gradient(235deg, #FFFFFF 0%, #000000 100%), linear-gradient(90deg, #FFE037 0%, #FFE037 40%, #1DCD9F 40%, #1DCD9F 50%, #088C6F 50%, #088C6F 70%, #23033C 70%, #23033C 100%);
+background-blend-mode: overlay, overlay, overlay, normal;
+	}
+	.wrap-login100{
+		background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%23d3d3d3' fill-opacity='0.16'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	}
+
+	.or{
+		position: relative;
+
+	}
+	.or::after{
+		content: '';
+		width: 20px;
+		position: absolute;
+		transform: translate(30%,-50%);
+		top: 50%;
+		height: 2px;
+		background-color: #23033C;
+	}
+	.or::before{
+		content: '';
+		width: 20px;
+		position: absolute;
+		transform: translate(-130%,-50%);
+		top: 50%;
+		height: 2px;
+		background-color: #23033C;
+	}
+
+</style>
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" >
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="/register">
+					<span class="login100-form-title p-b-53">
+						Sign Up With
+					</span>
+
+					<a href="/auth/facebook" class="btn-face m-b-20">
+						<i class="fa fa-facebook-official"></i>
+						Facebook
+					</a>
+
+					<a href="/auth/google" class="btn-google m-b-20">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+						Google
+					</a>
+
+					<div style="width: 100%;margin-top: 20px;"><h1 class="text-center or" >OR</h1></div> <br>
+					<div style="width: 100%;">
+						
+					<div class="p-t-31 p-b-9">
+						<span class="txt1" style="display: block;">
+							Email
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" required>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							First Name
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="name" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Password
+						</span>
+
+						<!-- <a href="#" class="txt2 bo1 m-l-5">
+							Forgot?
+						</a> -->
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" required>
+						<span class="focus-input100"></span>
+						
+					</div>
+					</div>
+
+					<small style="color: red;">
+                        <ul>
+                         
+                            <% errorList.forEach(el => { %>
+                                <li><%= el %></li> 
+                            <% }); %>
+                        </ul>
+                    </small > 
+
+					<div class="container-login100-form-btn m-t-17" style="margin-top: 2rem;">
+						<button class="login100-form-btn" type="submit">
+							Sign Up
+						</button>
+					</div>
+					<div class="w-full text-center p-t-55">
+						<span class="txt2">
+							Already a member?
+						</span>
+
+						<a href="/login" class="txt2 bo1">
+							Log In here
+						</a>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="login_js/main.js"></script>
+
+</body>
+</html>
